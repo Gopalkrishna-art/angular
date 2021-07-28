@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>{{header}}</h1>
+
+  <div class="container">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form">
+        <label class="label" for="">Sno</label>
+        <input class="input" type="number" [ngModel]='groceryList.id' name='id'>
+      </div>
+      <div class="form">
+        <label class="label" for="">Item</label>
+        <input class="input" type="text" [ngModel]='groceryList.item' name='item'>
+      </div>
+      <div class="form">
+        <label class="label" for="">Unit</label>
+        <input class="input" type="number" [ngModel]='groceryList.unit' name='unit'>
+      </div>
+      <div class="form">
+        <label class="label" for="">UnitPrice</label>
+        <input class="input" type="number" [ngModel]='groceryList.unitprice' name='unitprice'>
+      </div>
+      <div class="form">
+        <button type="submit">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>

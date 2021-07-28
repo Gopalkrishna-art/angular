@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+
+<div class="container">
+  <h1>Grocery List</h1>
+  <a routerLink="list/add/0"><button class="btn">Add Items</button></a>
+  <div class="container">
+    <table class="table" id="tab">
+      <thead>
+        <th>Sno</th>
+        <th>Items</th>
+        <th>Units</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+      </thead>
+
+      <tbody>
+        <tr *ngFor='let list of groceryList'>
+          <td>{{list.id}}</td>
+          <td>{{list.item}}</td>
+          <td>{{list.unit}}</td>
+          <td>{{list.unitprice}}</td>
+          <td>{{list.totalprice}}</td>
+          <td style="border: none;"><a [routerLink]="['list/edit',list.id]"><i class="fa fa-edit"
+                style="font-size:20px;"></i></a></td>
+          <td style="border: none;"><button (click)="onDelete(list.id)"><i class="fa fa-trash"
+                style="font-size:20px;"></i></button></td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="groceryList[0]">
+        <td colspan="4">GrandTotal :</td>
+        <td>{{groceryList[0].grandtotal}}</td>
+      </tfoot>
+    </table>
+  </div>

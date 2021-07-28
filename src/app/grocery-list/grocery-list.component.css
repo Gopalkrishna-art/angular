@@ -1,0 +1,46 @@
+table {
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+h1 {
+  color: crimson;
+  font-size: 50px;
+}
+
+.btn {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+}
+
+table,
+th,
+td {
+  background-color: rgb(236, 90, 241);
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align-last: center;
+  padding: 15px;
+}
+
+.edit {
+  border: none;
+}
+
+#tab {
+  width: 1000px;
+}
